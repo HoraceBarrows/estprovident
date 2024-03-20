@@ -1,0 +1,76 @@
+{
+  "name": "estprovident",
+  "version": "1.9.0",
+  "description": "JavaScript SDK to manage and interact with the safe claims on Safient protocol.",
+  "keywords": [
+    "rerum",
+    "consequatur",
+    "Safient",
+    "IPFS",
+    "Crypto"
+  ],
+  "scripts": {
+    "prettier": "prettier --write 'contracts/**/*.sol'",
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "chain": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:sdk": "npm run deploy && npm run build",
+    "test:contract": "hardhat test --network hardhat",
+    "test:sdk": "mocha test-sdk/claims.js --timeout 100000",
+    "test": "npm run test-contract && npm run test-sdk",
+    "generate": "hardhat generate",
+    "account": "hardhat account",
+    "build": "tsc -p tsconfig.json",
+    "build:docs": "cd docs && npm install && npm run build",
+    "serve:docs": "npm run build:docs && cd docs && npm run start",
+    "deploy:docs": "npm run build:docs && cd docs && npx docusaurus deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HoraceBarrows/estprovident.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "author": "BellaKilback",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^15.6.1",
+    "chalk": "^2.4.2",
+    "prettier-plugin-solidity": "*",
+    "typedoc": "^0.22.4",
+    "typescript": "^4.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ethersproject/address": "^5.2.0",
+    "@ethersproject/bignumber": "^5.2.0",
+    "@ethersproject/contracts": "^5.0.5",
+    "@ethersproject/logger": "^5.2.0",
+    "@ethersproject/providers": "^5.4.4",
+    "@ethersproject/units": "^5.2.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@textile/hub": "^6.1.0",
+    "bip39": "2.5.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "did-jwt": "^5.6.2",
+    "distinctiovero": "^1.0.0",
+    "dotenv": "^10.0.0",
+    "eligendiratione": "^1.0.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-wallet": "0.6.5",
+    "ethers": "^5.4.3",
+    "fs-extra": "^10.0.0",
+    "hardhat": "^2.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "ramda": "^0.27.1"
+  }
+}
